@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    volumes:
+      - .:/citibike_api
+      - ~/.config/gcloud/application_default_credentials.json:/application_default_credentials.json
+    env_file:
+      - .env
+    command: uvicorn main:api --reload --host 0.0.0.0
+    ports:
+      - 8000:8000
