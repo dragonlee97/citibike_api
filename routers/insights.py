@@ -8,7 +8,7 @@ from jinja2 import Template
 from utils import connect_to_bq
 from oauth2 import get_current_user
 
-router = APIRouter(prefix="/insights", tags=["insights"])
+router = APIRouter(prefix="/insights", tags=["Insights"])
 
 
 @router.get("/")
